@@ -157,6 +157,6 @@ def to_sql(tb_name, conn, dataframe, type="update", chunksize=2000):
 
         if sys.version_info.major == 2:
             sql_main = sql_main.replace("u`", "`")
-        # sql_main = sql_main.replace("%", "%%")
+        sql_main = sql_main.replace("%", "%%")
         conn.execute(sql_main)
 
